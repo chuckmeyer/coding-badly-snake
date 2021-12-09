@@ -39,7 +39,7 @@ def find_food(size: int, vision: str, possible_moves: List[str]) -> List[str]:
     index = client.init_index(index_name)
     results = index.search(vision)
     if results['hits']:
-        for move in results['hits']['0']['best_move']:
+        for move in results['hits'][0]['best_move']:
             if move in possible_moves:
                 best_moves.append(move)
     return best_moves
