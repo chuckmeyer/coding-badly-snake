@@ -1,9 +1,10 @@
 from algoliasearch.search_client import SearchClient
 import random
 from typing import List, Dict
+import os
 
-ALGOLIA_APP_ID = environ.get('ALGOLIA_APP_ID')
-ALGOLIA_API_KEY = environ.get('ALGOLIA_API_KEY')
+ALGOLIA_APP_ID = os.environ['ALGOLIA_APP_ID']
+ALGOLIA_API_KEY = os.environ['ALGOLIA_API_KEY']
 
 client = SearchClient.create(ALGOLIA_APP_ID, ALGOLIA_API_KEY)
 
