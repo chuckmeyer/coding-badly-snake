@@ -137,6 +137,7 @@ def choose_move(data: dict) -> str:
     best_moves = find_food(5, my_vision, possible_moves)
 
     # Choose a random direction from the remaining possible_moves to move in, and then return that move
+    move = ''
     if possible_moves:
         for best_move in best_moves:
             if best_moves in possible_moves:
